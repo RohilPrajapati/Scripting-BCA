@@ -111,10 +111,19 @@
                 console.log("working 2");
                 usernameValidation.css('display','none');
                 passwordValidation.css('display','none');
-                // $('#login-form').submit();
-                // document.getElementById('login-form').submit();       
                 $('.successMsg').text('Login in success full');
                 $('.successMsg').css('display','block')
+
+                // this give loop error 
+                setTimeout(function (){
+                    $('#login-form')[0].submit();
+                },5000);
+                
+
+                // this submit form without error 
+                // document.getElementById('login-form').submit();
+
+                
             }
         }
     </script>
